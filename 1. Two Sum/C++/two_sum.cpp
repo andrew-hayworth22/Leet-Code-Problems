@@ -115,7 +115,8 @@ vector<int> getVector(string vectorString) {
 
 ///////////////////////////////////////////////////////////////////
 // twoSum() -> finds two integers in vector that add up to target
-//     Argument: array -> array of integers
+//     Arguments: array  -> array of integers
+//                target -> integer that elements add up to
 //         -> Note: array must have exactly one solution
 //     Return: two integers that add up to target in vector form
 ///////////////////////////////////////////////////////////////////
