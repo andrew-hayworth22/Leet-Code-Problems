@@ -73,13 +73,19 @@ void oops(const char* message) {
 //     Return: length of the substring
 ///////////////////////////////////////////////////////////////////
 int lengthOfLongestSubstring(string line) {
+    // Holds the locations of where characters were last seen
     vector<int> characters(128, 0);
+    // Holds the final result
     int result = 0;
+    // Holds the last location of a repeating character
     int k = 0;
 
     for(int i = 0; i < line.length(); ++i) {
+        // Set k to the latest instance of a repeating character
         k = max(k, characters[line[i]]);
+        // Set the last known position of this character in the array
         characters[line[i]] = i + 1;
+        // Result is updated to either the previous result, or the length since the last repeating character
         result = max(result, i - k + 1);
     }
 
